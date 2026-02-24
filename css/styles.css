@@ -113,6 +113,8 @@ a {
   text-decoration: none;
   transition: color var(--transition-fast);
   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="%23D100FF" stroke-width="2"/><circle cx="12" cy="12" r="2" fill="%23D100FF"/></svg>') 12 12, pointer;
+  -webkit-tap-highlight-color: transparent;
+  /* Removes blue flash on mobile tap */
 }
 
 a:hover {
@@ -142,14 +144,21 @@ button {
   border: none;
   background: none;
   color: inherit;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  /* Prevents 300ms double-tap delay */
 }
 
 input,
 textarea,
 select {
   font-family: inherit;
-  font-size: inherit;
+  font-size: 16px;
+  /* 16px explicitly stops iOS Safari from Auto-Zooming */
   color: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
 }
 
 h1,
@@ -249,15 +258,15 @@ p {
 }
 
 .grid-2 {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
 }
 
 .grid-3 {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
 }
 
 .grid-4 {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
 }
 
 /* ============================================
@@ -931,14 +940,13 @@ textarea.form-control {
 .founder-links {
   margin-top: 1rem;
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.5rem;
   opacity: 0;
   transform: translateY(10px);
   transition: all var(--transition);
-  position: absolute;
-  bottom: 1.5rem;
-  left: 0;
+  position: relative;
   width: 100%;
   z-index: 20;
 }
@@ -954,7 +962,9 @@ textarea.form-control {
 }
 
 .founder-link-item {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-mono);
   font-size: 0.85rem;
   color: var(--text-dim);
@@ -1392,6 +1402,8 @@ textarea.form-control {
     border-left: 1px solid var(--border);
     transition: right var(--transition);
     gap: 0.25rem;
+    z-index: 999;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.8);
   }
 
   .main-nav.open {
@@ -1439,8 +1451,8 @@ textarea.form-control {
   }
 
   .hero-logo {
-    width: 80px;
-    height: 80px;
+    max-width: 100px;
+    height: auto;
   }
 
   .card {
