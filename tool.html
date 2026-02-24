@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Review — TechX Forum</title>
+    <meta name="description"
+        content="In-depth AI tool review with ratings, pros, cons, and alternatives on TechX Forum.">
+    <meta property="og:title" content="Tool Review — TechX Forum">
+    <meta property="og:description" content="In-depth AI tool review with ratings, pros, cons, and alternatives.">
+    <meta property="og:image" content="assets/mainlogo.png">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="assets/mainlogo.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <a href="tools.html" style="font-size:0.9rem;color:var(--text-muted);">← Back to Tools Hub</a>
+            </div>
+        </div>
+
+        <section class="section" style="padding-top:2rem;">
+            <div class="container">
+                <div class="detail-layout">
+                    <div id="tool-detail">
+                        <div class="skeleton" style="height:40px;width:60%;margin-bottom:1rem;"></div>
+                        <div class="skeleton" style="height:20px;width:40%;margin-bottom:2rem;"></div>
+                        <div class="skeleton" style="height:200px;margin-bottom:1rem;"></div>
+                        <div class="skeleton" style="height:100px;"></div>
+                    </div>
+                    <aside class="detail-sidebar">
+                        <div class="sidebar-card">
+                            <h4>Similar Tools</h4>
+                            <div id="related-tools">
+                                <div class="skeleton" style="height:60px;margin-bottom:0.5rem;"></div>
+                                <div class="skeleton" style="height:60px;margin-bottom:0.5rem;"></div>
+                            </div>
+                        </div>
+                        <div class="sidebar-card">
+                            <h4>Rate This Tool</h4>
+                            <div class="star-rating" style="font-size:1.5rem;">
+                                <span class="star" data-selected="false">★</span>
+                                <span class="star" data-selected="false">★</span>
+                                <span class="star" data-selected="false">★</span>
+                                <span class="star" data-selected="false">★</span>
+                                <span class="star" data-selected="false">★</span>
+                                <input type="hidden" name="rating" value="0">
+                            </div>
+                            <p class="text-muted mt-2" style="font-size:0.8rem;">Click to rate this tool</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/components.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/content-loader.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            ContentLoader.loadToolDetail();
+        });
+    </script>
+</body>
+
+</html>

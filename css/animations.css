@@ -1,0 +1,312 @@
+/* ============================================
+   TechX Forum — Animations & Transitions
+   ============================================ */
+
+/* --- Scroll-Triggered Animations --- */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+    will-change: transform, opacity;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Variants */
+.animate-on-scroll.slide-left {
+    transform: translateX(-40px);
+}
+
+.animate-on-scroll.slide-left.visible {
+    transform: translateX(0);
+}
+
+.animate-on-scroll.slide-right {
+    transform: translateX(40px);
+}
+
+.animate-on-scroll.slide-right.visible {
+    transform: translateX(0);
+}
+
+.animate-on-scroll.scale-up {
+    transform: scale(0.9);
+}
+
+.animate-on-scroll.scale-up.visible {
+    transform: scale(1);
+}
+
+/* Stagger children */
+.stagger-children .animate-on-scroll:nth-child(1) {
+    transition-delay: 0ms;
+}
+
+.stagger-children .animate-on-scroll:nth-child(2) {
+    transition-delay: 100ms;
+}
+
+.stagger-children .animate-on-scroll:nth-child(3) {
+    transition-delay: 200ms;
+}
+
+.stagger-children .animate-on-scroll:nth-child(4) {
+    transition-delay: 300ms;
+}
+
+.stagger-children .animate-on-scroll:nth-child(5) {
+    transition-delay: 400ms;
+}
+
+.stagger-children .animate-on-scroll:nth-child(6) {
+    transition-delay: 500ms;
+}
+
+/* --- Gold Glow Pulse --- */
+@keyframes gold-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(212, 168, 83, 0.1);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(212, 168, 83, 0.25);
+    }
+}
+
+.glow-pulse {
+    animation: gold-pulse 3s ease-in-out infinite;
+}
+
+/* --- Gradient Text Shimmer --- */
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.text-shimmer {
+    background: linear-gradient(90deg,
+            var(--gold-dark),
+            var(--gold-light),
+            var(--gold),
+            var(--gold-light),
+            var(--gold-dark));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 4s linear infinite;
+}
+
+/* --- Floating Animation --- */
+@keyframes float-slow {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    33% {
+        transform: translateY(-8px) rotate(1deg);
+    }
+
+    66% {
+        transform: translateY(4px) rotate(-1deg);
+    }
+}
+
+.float-slow {
+    animation: float-slow 8s ease-in-out infinite;
+}
+
+/* --- Particle Dots Background --- */
+@keyframes drift {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(10px, -10px);
+    }
+
+    50% {
+        transform: translate(-5px, -20px);
+    }
+
+    75% {
+        transform: translate(-10px, -10px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* --- Card Hover Effects (3D Tilt Ready) --- */
+.card-hover-glow {
+    transition: all var(--transition), transform 0.1s linear;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.card-hover-glow:hover {
+    border-color: var(--gold-dark);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(212, 168, 83, 0.1),
+        inset 0 1px 0 rgba(212, 168, 83, 0.2);
+    z-index: 10;
+}
+
+.card-hover-glow>* {
+    transform: translateZ(30px);
+    /* Pushes content outward in 3D space */
+    transition: transform 0.3s var(--ease);
+}
+
+/* --- Button Ripple --- */
+.btn-ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-ripple::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s, opacity 0.5s;
+    opacity: 0;
+}
+
+.btn-ripple:active::after {
+    width: 300px;
+    height: 300px;
+    opacity: 1;
+    transition: 0s;
+}
+
+/* --- Page Load Entrance --- */
+@keyframes page-enter {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: page-enter 0.5s var(--ease);
+}
+
+/* --- Underline Grow --- */
+.underline-grow {
+    position: relative;
+}
+
+.underline-grow::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width var(--transition), left var(--transition);
+}
+
+.underline-grow:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* --- Typing Cursor --- */
+@keyframes blink-cursor {
+
+    0%,
+    100% {
+        border-color: var(--gold);
+    }
+
+    50% {
+        border-color: transparent;
+    }
+}
+
+.typing-cursor {
+    border-right: 2px solid var(--gold);
+    animation: blink-cursor 1s step-end infinite;
+}
+
+/* --- Scale Pop (for icons, badges on hover) --- */
+.scale-pop {
+    transition: transform var(--transition-fast);
+}
+
+.scale-pop:hover {
+    transform: scale(1.1);
+}
+
+/* --- Parallax Helper --- */
+.parallax-layer {
+    will-change: transform;
+    transition: transform 0.1s linear;
+}
+
+/* --- Progress Bar --- */
+@keyframes progress-fill {
+    from {
+        width: 0;
+    }
+}
+
+.progress-bar {
+    height: 4px;
+    background: var(--bg-elevated);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.progress-bar .fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold-light));
+    border-radius: var(--radius-full);
+    animation: progress-fill 1s var(--ease);
+}
+
+/* --- Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .animate-on-scroll {
+        opacity: 1;
+        transform: none;
+    }
+
+    #hero-canvas {
+        display: none;
+    }
+}

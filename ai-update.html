@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Update — TechX Forum</title>
+    <meta name="description" content="Read the full AI update article on TechX Forum.">
+    <meta property="og:title" content="AI Update — TechX Forum">
+    <meta property="og:description" content="Read the full AI update article on TechX Forum.">
+    <meta property="og:image" content="assets/mainlogo.png">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="assets/mainlogo.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <a href="ai-updates.html" style="font-size:0.9rem;color:var(--text-muted);">← Back to AI Updates</a>
+            </div>
+        </div>
+
+        <section class="section" style="padding-top:2rem;">
+            <div class="container">
+                <div class="detail-layout">
+                    <div id="update-detail">
+                        <div class="skeleton" style="height:40px;width:60%;margin-bottom:1rem;"></div>
+                        <div class="skeleton" style="height:20px;width:40%;margin-bottom:2rem;"></div>
+                        <div class="skeleton" style="height:200px;margin-bottom:1rem;"></div>
+                        <div class="skeleton" style="height:150px;"></div>
+                    </div>
+                    <aside class="detail-sidebar">
+                        <div class="sidebar-card">
+                            <h4>Related Updates</h4>
+                            <div id="related-updates">
+                                <div class="skeleton" style="height:60px;margin-bottom:0.5rem;"></div>
+                                <div class="skeleton" style="height:60px;margin-bottom:0.5rem;"></div>
+                            </div>
+                        </div>
+                        <div class="sidebar-card">
+                            <h4>Categories</h4>
+                            <div style="display:flex;flex-direction:column;gap:0.5rem;">
+                                <a href="ai-updates.html" class="badge badge-models"
+                                    style="text-decoration:none;">Models</a>
+                                <a href="ai-updates.html" class="badge badge-tools"
+                                    style="text-decoration:none;">Tools</a>
+                                <a href="ai-updates.html" class="badge badge-research"
+                                    style="text-decoration:none;">Research</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/components.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/content-loader.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            ContentLoader.loadUpdateDetail();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+[
+    {
+        "id": "imagenet",
+        "name": "ImageNet (ILSVRC)",
+        "type": "Dataset",
+        "description": "The benchmark dataset that launched the deep learning revolution — 14 million labeled images across 20,000+ categories. Essential for image classification research and model benchmarking.",
+        "url": "https://image-net.org",
+        "tags": [
+            "Computer Vision",
+            "Classification",
+            "Benchmark"
+        ]
+    },
+    {
+        "id": "common-crawl",
+        "name": "Common Crawl",
+        "type": "Dataset",
+        "description": "A massive open repository of web crawl data containing petabytes of raw web page data, metadata, and text extractions. Used to train many of the largest language models.",
+        "url": "https://commoncrawl.org",
+        "tags": [
+            "NLP",
+            "Web Data",
+            "Large Scale"
+        ]
+    },
+    {
+        "id": "attention-paper",
+        "name": "Attention Is All You Need",
+        "type": "Paper",
+        "description": "The seminal 2017 paper by Vaswani et al. that introduced the Transformer architecture, revolutionizing NLP and eventually all of deep learning.",
+        "url": "https://arxiv.org/abs/1706.03762",
+        "tags": [
+            "Transformers",
+            "NLP",
+            "Foundational"
+        ]
+    },
+    {
+        "id": "scaling-laws",
+        "name": "Scaling Laws for Neural Language Models",
+        "type": "Paper",
+        "description": "Kaplan et al.'s influential paper showing that model performance follows predictable power laws as compute, data, and parameters increase. Shaped the development of GPT-3 and beyond.",
+        "url": "https://arxiv.org/abs/2001.08361",
+        "tags": [
+            "Scaling",
+            "LLM",
+            "Research"
+        ]
+    },
+    {
+        "id": "openai-api",
+        "name": "OpenAI API",
+        "type": "API",
+        "description": "Access GPT-4, GPT-5, DALL·E, Whisper, and more through a simple REST API. The most widely used commercial AI API with extensive documentation and SDKs.",
+        "url": "https://platform.openai.com",
+        "tags": [
+            "LLM",
+            "API",
+            "GPT",
+            "Commercial"
+        ]
+    },
+    {
+        "id": "huggingface-api",
+        "name": "Hugging Face Inference API",
+        "type": "API",
+        "description": "Run inference on 500,000+ models hosted on Hugging Face Hub through simple HTTP requests. Free tier available for experimentation.",
+        "url": "https://huggingface.co/inference-api",
+        "tags": [
+            "Models",
+            "API",
+            "Open Source",
+            "Free"
+        ]
+    },
+    {
+        "id": "fast-ai-course",
+        "name": "fast.ai — Practical Deep Learning",
+        "type": "Learning",
+        "description": "The gold standard free course for learning deep learning. Uses a top-down teaching approach — you'll train models from day one, then gradually understand the theory behind them.",
+        "url": "https://course.fast.ai",
+        "tags": [
+            "Course",
+            "Deep Learning",
+            "Free",
+            "Beginner"
+        ]
+    },
+    {
+        "id": "3blue1brown-nn",
+        "name": "3Blue1Brown — Neural Networks Series",
+        "type": "Learning",
+        "description": "Grant Sanderson's visually stunning video series that builds intuition for neural networks, backpropagation, and gradient descent through beautiful animations.",
+        "url": "https://www.3blue1brown.com/topics/neural-networks",
+        "tags": [
+            "Video",
+            "Neural Networks",
+            "Visual",
+            "Free"
+        ]
+    },
+    {
+        "id": "arxiv-sanity",
+        "name": "Arxiv Sanity Preserver",
+        "type": "Learning",
+        "description": "Andrej Karpathy's tool for browsing, searching, and filtering arXiv papers. Helps researchers stay on top of the latest ML publications without drowning in the firehose of daily papers.",
+        "url": "https://arxiv-sanity-lite.com",
+        "tags": [
+            "Papers",
+            "Research",
+            "Tool",
+            "Free"
+        ]
+    },
+    {
+        "id": "squad-dataset",
+        "name": "SQuAD 2.0",
+        "type": "Dataset",
+        "description": "The Stanford Question Answering Dataset — 150K+ question-answer pairs with unanswerable questions. A fundamental benchmark for evaluating reading comprehension and QA systems.",
+        "url": "https://rajpurkar.github.io/SQuAD-explorer/",
+        "tags": [
+            "NLP",
+            "QA",
+            "Benchmark",
+            "Reading Comprehension"
+        ]
+    }
+]

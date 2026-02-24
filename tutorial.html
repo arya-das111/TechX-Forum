@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial — TechX Forum</title>
+    <meta name="description" content="Follow this step-by-step AI tutorial on TechX Forum.">
+    <meta property="og:title" content="Tutorial — TechX Forum">
+    <meta property="og:description" content="Step-by-step AI tutorial on TechX Forum.">
+    <meta property="og:image" content="assets/mainlogo.png">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="assets/mainlogo.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <a href="tutorials.html" style="font-size:0.9rem;color:var(--text-muted);">← Back to Tutorials</a>
+            </div>
+        </div>
+
+        <section class="section" style="padding-top:2rem;">
+            <div class="container" style="max-width:800px;">
+                <div id="tutorial-detail">
+                    <div class="skeleton" style="height:40px;width:70%;margin-bottom:1rem;"></div>
+                    <div class="skeleton" style="height:20px;width:40%;margin-bottom:2rem;"></div>
+                    <div class="skeleton" style="height:100px;margin-bottom:1.5rem;"></div>
+                    <div class="skeleton" style="height:80px;margin-bottom:1.5rem;"></div>
+                    <div class="skeleton" style="height:80px;margin-bottom:1.5rem;"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/components.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/content-loader.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            ContentLoader.loadTutorialDetail();
+        });
+    </script>
+</body>
+
+</html>
