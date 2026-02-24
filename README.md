@@ -1,8 +1,3 @@
-# TechX-Forum
-Here is a fully copy-paste ready creative README file for **TechX Forum** 👇
-
----
-
 # 🚀 TechX Forum
 
 > ⚡ Tracking AI. Testing Tools. Building Intelligence.
